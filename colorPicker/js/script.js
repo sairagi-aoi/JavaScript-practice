@@ -1,4 +1,5 @@
-document.querySelector('#colorTxet').textContent = document.querySelector('#colorPicker').value;
+document.querySelector('#colorTxet').textContent = `カラーコード:document.querySelector('#colorPicker').value`;
+
 
 
 
