@@ -17,11 +17,40 @@
 - [ ] 同じ関数に2曲目を渡すと、コンソールの2行目に2曲目が出る。ページの「再生中」欄には1曲目が表示されている。
 - [ ] 関数の中身を変えず、好きな曲名と演奏者を渡しても、同じ形式の文字列が返る。
 
+括弧は表と同じ全角の `（）` を使います。半角の `()` では、見た目が近くても完了条件を満たしません。
+
 <details>
 <summary>ヒント</summary>
 
-関数の外で紹介文を再利用するには、組み立てた文字列が呼び出し元まで届く必要があります。コンソールに文が出てもページが空なら、呼び出し側が受け取った値を確かめましょう。
+関数の外で紹介文を再利用するには、組み立てた文字列が呼び出し元まで届く必要があります。コンソールに文が出てもページが空なら、呼び出し側が受け取った値を確かめましょう。紹介文の括弧は、表のとおり全角です。
 
 </details>
 
-[作業用HTML](index.html) · [取り組み方と問題一覧](../README.md)
+<details>
+<summary>解答例</summary>
+
+自分のコードを書いてから開いてください。
+
+### 答え合わせの観点
+
+- `formatTrack` は紹介文を `return` するだけです。関数の中でページやコンソールへ出していません。
+- `#nowPlaying` とコンソール1行目は、同じ戻り値を定数で受け取って使っています。
+- コンソール2行目も同じ関数の戻り値です。ページの再生中は1曲目のままです。
+- 括弧は全角の `（）` です。
+
+```js
+function formatTrack(title, artist) {
+  return `${title}（${artist}）`;
+}
+
+const firstTrack = formatTrack('星を拾う', '波止場トリオ');
+const nowPlaying = document.querySelector('#nowPlaying');
+
+nowPlaying.textContent = firstTrack;
+console.log(firstTrack);
+console.log(formatTrack('夜の窓', 'にじ'));
+```
+
+</details>
+
+[作業用HTML](index.html) · [前の問題](../01-meeting-place/README.md) · [次の問題](../03-lost-and-found/README.md) · [一覧](../README.md)

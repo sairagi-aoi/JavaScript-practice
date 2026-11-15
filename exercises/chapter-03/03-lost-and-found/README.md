@@ -20,4 +20,29 @@
 
 </details>
 
-[作業用HTML](index.html) · [取り組み方と問題一覧](../README.md)
+<details>
+<summary>解答例</summary>
+
+自分のコードを書いてから開いてください。
+
+### 答え合わせの観点
+
+- 見本を更新する関数は1つで、開いた直後の呼び出しと `input` イベントの両方がそれを使っています。
+- 見本は `textContent` です。`<b>鍵</b>` を貼り付けてもタグにならず、山括弧ごと読めます。
+- 入力の途中で更新されます。欄から離れたときだけでは、途中の文字が反映されません。
+
+```js
+const item = document.querySelector('#item');
+const preview = document.querySelector('#preview');
+
+function updatePreview() {
+  preview.textContent = item.value;
+}
+
+updatePreview();
+item.addEventListener('input', updatePreview);
+```
+
+</details>
+
+[作業用HTML](index.html) · [前の問題](../02-radio-track/README.md) · [次の問題](../04-parcel-desk/README.md) · [一覧](../README.md)

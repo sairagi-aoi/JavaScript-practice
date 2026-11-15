@@ -23,4 +23,26 @@
 
 </details>
 
-[作業用HTML](index.html) · [取り組み方と問題一覧](../README.md)
+<details>
+<summary>解答例</summary>
+
+自分のコードを書いてから開いてください。
+
+### 答え合わせの観点
+
+- 集合場所は定数1つにだけ書き、2つの文面はその定数を埋め込んでいる。
+- 定数を「正面玄関」に変えて再読み込みすると、両方の文が表の2行目になる。
+- 表示先は `#departure` と `#lateArrival`。
+
+```js
+const meetingPlace = '中庭';
+const departure = document.querySelector('#departure');
+const lateArrival = document.querySelector('#lateArrival');
+
+departure.textContent = `${meetingPlace}で集合します。`;
+lateArrival.textContent = `遅れた方は${meetingPlace}へ。`;
+```
+
+</details>
+
+[作業用HTML](index.html) · [次の問題](../02-radio-track/README.md) · [一覧](../README.md)

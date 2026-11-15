@@ -25,4 +25,35 @@
 
 </details>
 
-[作業用HTML](index.html) · [取り組み方と問題一覧](../README.md)
+<details>
+<summary>解答例</summary>
+
+自分のコードを書いてから開いてください。
+
+### 答え合わせの観点
+
+- 比較は `===` です。`book` は `BOOK` に一致しません。
+- `BOOK` と `ART` 以外（空欄や `BOO`）はすべて「総合窓口」です。
+- 開いたときに一度判定し、その後は `input` で同じ関数を呼んでいます。1文字消した瞬間に窓口が戻ります。
+
+```js
+const parcelCode = document.querySelector('#parcelCode');
+const desk = document.querySelector('#desk');
+
+function updateDesk() {
+  if (parcelCode.value === 'BOOK') {
+    desk.textContent = '図書窓口';
+  } else if (parcelCode.value === 'ART') {
+    desk.textContent = '作品窓口';
+  } else {
+    desk.textContent = '総合窓口';
+  }
+}
+
+updateDesk();
+parcelCode.addEventListener('input', updateDesk);
+```
+
+</details>
+
+[作業用HTML](index.html) · [前の問題](../03-lost-and-found/README.md) · [次の問題](../05-reading-size/README.md) · [一覧](../README.md)
