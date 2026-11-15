@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>上映会の入口ボード</title>
+  <style>
+    #board {
+      max-width: 32rem;
+      padding: 1rem;
+      border: 1px solid #64748b;
+      color: #172033;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>上映会の入口ボード</h1>
+    <p>
+      <label for="film">上映作品</label>
+      <input id="film" type="text" value="月の港">
+    </p>
+    <p>
+      <label for="stage">受付状況</label>
+      <select id="stage">
+        <option value="prep" selected>準備中</option>
+        <option value="open">開場</option>
+        <option value="full">満席</option>
+      </select>
+    </p>
+    <section id="board" aria-label="入口の案内">
+      <h2 id="boardTitle"></h2>
+      <p id="boardNote"></p>
+    </section>
+  </main>
+  <script>
+    // ここに自分のJavaScriptを書く
+  </script>
+</body>
+</html>
