@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>席札</title>
+  <style>
+    #nameCard {
+      max-width: 32rem;
+      padding: 1rem;
+      border: 1px solid #64748b;
+      color: #172033;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>席札</h1>
+    <p>
+      <label for="paper">紙の色</label>
+      <select id="paper">
+        <option value="#fffbeb" selected>生成り</option>
+        <option value="#ecfdf5">薄緑</option>
+        <option value="#eff6ff">薄青</option>
+      </select>
+    </p>
+    <p>
+      <label for="ink">文字の大きさ</label>
+      <select id="ink">
+        <option value="16px">16px</option>
+        <option value="24px" selected>24px</option>
+        <option value="40px">40px</option>
+      </select>
+    </p>
+    <p>
+      <label for="guest">名前</label>
+      <input id="guest" type="text" value="山田">
+    </p>
+    <section id="nameCard" aria-label="席札">
+      <p id="guestName"></p>
+    </section>
+    <h2>読み上げ</h2>
+    <p id="sampleRead"></p>
+  </main>
+  <script>
+    // ここに自分のJavaScriptを書く
+  </script>
+</body>
+</html>

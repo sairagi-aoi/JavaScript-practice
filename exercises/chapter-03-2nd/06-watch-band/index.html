@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>見守り当番の腕章</title>
+  <style>
+    #armband {
+      max-width: 32rem;
+      padding: 1rem;
+      border: 1px solid #64748b;
+      color: #172033;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>見守り当番の腕章</h1>
+    <p>
+      <label for="member">担当者</label>
+      <input id="member" type="text" value="青木">
+    </p>
+    <p>
+      <label for="spot">場所</label>
+      <input id="spot" type="text" value="南門">
+    </p>
+    <p>
+      <label for="band">腕章の色</label>
+      <input id="band" type="text" value="黄">
+    </p>
+    <section id="armband" aria-label="当番の腕章">
+      <h2>今日の当番</h2>
+      <p id="duty"></p>
+      <h2>控え</h2>
+      <p id="backup"></p>
+      <h2>腕章</h2>
+      <p id="bandLabel"></p>
+    </section>
+  </main>
+  <script>
+    // ここに自分のJavaScriptを書く
+  </script>
+</body>
+</html>
