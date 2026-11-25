@@ -20,9 +20,9 @@ const memo note = document.querySelector('#memo');
 | `class` | `class` は予約語で、定数名にできない |
 | `memo note` | 名前の途中にスペースがある |
 
-使える文字は半角英数字と `$` と `_` です。数字では始められません。予約語には、この章で使う `function` や `return`、`if` も含まれます。この問いの定数名は、役割がわかるキャメルケースにしてください。
+この演習では、半角英数字と `$` と `_` を使います。数字では始められません。予約語には、この章で使う `function` や `return`、`if` も含まれます。この問いの定数名は、役割がわかるキャメルケースにしてください。
 
-名前の文字を直したあとも、定義した名前と使っている名前が違うと、`poster` を読んだ瞬間に ReferenceError になり、2枚とも表示されません。
+名前の文字を直したあとも、定義していない名前を使うと、実行時に `ReferenceError` になります。次は `postreEl` を読んだところで止まるため、その後の回覧メモも表示されません。
 
 ```js
 const venueInput = document.querySelector('#venue');
@@ -30,11 +30,11 @@ const posterEl = document.querySelector('#poster');
 const memoEl = document.querySelector('#memo');
 const venueName = venueInput.value;
 
-poster.textContent = `${venueName}で開きます。`;
-memo.textContent = `会場は${venueName}です。`;
+postreEl.textContent = `${venueName}で開きます。`;
+memoEl.textContent = `会場は${venueName}です。`;
 ```
 
-`posterEl` を定義して `poster` と書くと、`poster` は未定義です。`memoEl` と `memo` も同じです。`textContent` に書く名前は、自分で定義した定数名と揃えてください。
+コンソールのエラーに出た名前を、宣言した名前と一文字ずつ比べてみましょう。なお、`poster` のようにHTMLのIDと同じ名前だと、ブラウザーがその要素を見つけてしまい、エラーにならないことがあります。この演習ではその動きに頼らず、`querySelector` で取得した要素を使います。
 
 | 会場名 | ポスター | 回覧メモ |
 | --- | --- | --- |
